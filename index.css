@@ -1,0 +1,48 @@
+
+* {
+     -moz-box-sizing: border-box;
+     -o-box-sizing: border-box;
+     -webkit-box-sizing: border-box;
+     box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: "Open Sans";
+    font-size: 13px;
+    text-align: center;
+     overflow: hidden;
+}
+
+#main {
+    margin: auto;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translate3d(0,-50%,0);
+}
+
+.button {
+    display: block;
+    width: 250px;
+    padding: 15px 0 15px 0;
+    margin: 5px auto;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+	background-color: #85C1F5;
+}
+
+.button:first-child {
+    border-radius: 5px 5px 0 0;
+}
+
+.button:last-child {
+    border-radius: 0 0 5px 5px;
+}
+
+.button:hover   { background-color: #74B0E4; }
+
