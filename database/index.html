@@ -3,42 +3,31 @@
     <head>
         <title>NUNB Characterlist</title>
         <link rel="stylesheet" type="text/css" href="index.css" />
-        <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
         <meta name="viewport" content="initial-scale=1, user-scalable=no, user-scalable=0">
     </head>
 
     <body>
 		<script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-1.12.3.js"></script>
 		<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+		<script type="text/javascript" charset="utf8" src="../common/data/unity.js"></script>
         <div id="main">
-			<table id="example" class="display" cellspacing="0" width="100%">
-				<thead>
-					<tr>
-						<th>Name</th>
-						<th>Type</th>
-						<th>Stars</th>
-						<th>Max Level</th>
-						<th>Start HP</th>
-						<th>Start Damage</th>
-						<th>Range</th>
-					</tr>
-				</thead>
-				<tfoot>
-					<tr>
-						<th>Name</th>
-						<th>Type</th>
-						<th>Stars</th>
-						<th>Max Level</th>
-						<th>Start HP</th>
-						<th>Start Damage</th>
-						<th>Range</th>
-					</tr>
-				</tfoot>
+			<table id="example" class="display" width="100%">
 			</table>
 			<script>
 				$(document).ready(function() {
 					$('#example').DataTable( {
-						"ajax": "../common/data/units.txt"
+					"ajax": "units.js",
+						columns: [
+							{ title: "ID" },
+							{ title: "Name" },
+							{ title: "Type" },
+							{ title: "Stars" },
+							{ title: "Cost" },
+							{ title: "Max Level" },
+							{ title: "Start HP" },
+							{ title: "Start Damage" },
+							{ title: "Range" }
+						]
 					} );
 				} );
 			</script>
