@@ -1,16 +1,47 @@
 <html>
 
     <head>
-        <title>NUNB Stuff</title>
+        <title>NUNB Characterlist</title>
         <link rel="stylesheet" type="text/css" href="index.css" />
         <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
         <meta name="viewport" content="initial-scale=1, user-scalable=no, user-scalable=0">
     </head>
 
     <body>
+		<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
+		<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
         <div id="main">
-			<a class="animated button" href="database/index.html">Character Database</a>
-			<a class="animated button" href="drops/index.html">Drop Table</a>
+			<table id="example" class="display" cellspacing="0" width="100%">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Type</th>
+						<th>Stars</th>
+						<th>Max Level</th>
+						<th>Start HP</th>
+						<th>Start Damage</th>
+						<th>Range</th>
+					</tr>
+				</thead>
+				<tfoot>
+					<tr>
+						<th>Name</th>
+						<th>Type</th>
+						<th>Stars</th>
+						<th>Max Level</th>
+						<th>Start HP</th>
+						<th>Start Damage</th>
+						<th>Range</th>
+					</tr>
+				</tfoot>
+			</table>
+			<script>
+				$(document).ready(function() {
+					$('#example').DataTable( {
+						"ajax": "../common/data/units.js"
+					} );
+				} );
+			</script>
         </div> 
     </body>
 
