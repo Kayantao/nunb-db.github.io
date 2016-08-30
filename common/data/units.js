@@ -1,4 +1,5 @@
-window.units = [
+{
+  "data":
 	//" -------Name-------------------", "Type", Rarety, Cost, Max lvl, Min-Hp, Min-Strengh, Range, Number of skills
 	[ "Naruto Uzumaki The Worst Looser", "Heart", 3, 30, 4, 190, 161, "Mid" ],
 	[ "Naruto Uzumaki The Worst Looser", "Heart", 4, 50, 10, 278, 251, "Mid" ],
@@ -184,4 +185,4 @@ window.units = [
 	[ "Gama-chan Flat", "Bravery", 1, 30, -, 1, 1, "-" ],
 	[ "Gama-chan Full to the Brim", "Bravery", 2, 30, -, 1, 1, "-" ],
 	[ "Gama-chan Big Spender", "Bravery", 3, 30, -, 1, 1, "-" ]
-	
+}
