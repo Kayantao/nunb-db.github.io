@@ -9,8 +9,14 @@
     <body>
 		<script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-1.12.3.js"></script>
 		<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
-		<script type="text/javascript" charset="utf8" src="units.js"></script>
+		<script type="text/javascript" charset="utf8" src="../common/data/unity.js"></script>
+		<div>
+			<a href="../index.html">
+				<img src="images/back.png" />
+			</a>
+		</div>
         <div id="main">
+			
 			<table id="example" class="display" width="100%">
 			</table>
 			<script>
@@ -19,11 +25,14 @@
 					"ajax": "units.js",
 						columns: [
 							{ title: "ID" },
+							{ title: "","render": function (data, type, row, meta) {
+								return '<a target="_new" href="characters/' + data + '.html">' + '<img class="tbn" src="images/' + data + '.png">' + '</a>'; 
+							} },
 							{ title: "Name" },
 							{ title: "Type" },
 							{ title: "Stars" },
-							{ title: "Cost" },
 							{ title: "Max Level" },
+							{ title: "Cost" },
 							{ title: "Start HP" },
 							{ title: "Start Damage" },
 							{ title: "Range" }

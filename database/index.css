@@ -3,7 +3,8 @@ table.dataTable{
 	margin:0 auto;
 	clear:both;
 	border-collapse:separate;
-	border-spacing:0
+	border-spacing:0;
+	text-align:center !important;
 }
 
 table.dataTable thead th,table.dataTable tfoot th{
@@ -275,11 +276,11 @@ table.dataTable,table.dataTable th,table.dataTable td{
 }
 
 .dataTables_wrapper .dataTables_length{
-	float:left
+	float:right
 }
 
 .dataTables_wrapper .dataTables_filter{
-	float:right;
+	float:left;
 	text-align:center
 }
 
@@ -439,4 +440,24 @@ table.dataTable,table.dataTable th,table.dataTable td{
 		margin-top:0.5em
 	}
 
-	}
+}
+
+#main{
+	width: 90%;
+	margin: auto;
+	margin-top: 30px;
+	background-color: rgba(255,255,255,0.8);
+	padding-top:5px;
+	border-style: solid;
+}
+
+body{
+	background-image: url("images/main.png");
+	background-attachment:fixed;
+	background-size: cover;
+}
+
+.tbn{
+	width: 80px;
+	height:80px;
+}
