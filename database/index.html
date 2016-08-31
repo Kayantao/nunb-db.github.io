@@ -29,7 +29,10 @@
 								return '<a target="_new" href="characters/' + data + '.html">' + '<img class="tbn" src="images/' + data + '.png">' + '</a>'; 
 							} },
 							{ title: "Name" },
-							{ title: "Type" },
+							{ title: "Type","render": function (data, type, row, meta) {
+								return '<img style="width:60px;height:60px;" src="images/' + data + '.png">'; 
+
+							} }, 
 							{ title: "Stars" },
 							{ title: "Max Level" },
 							{ title: "Cost" },
